@@ -5,8 +5,8 @@ Created on Mon Dec  2
 */
 
 #include <gazebo/common/Plugin.hh>
-#include <gazebo-9/gazebo/physics/physics.hh>
-#include <gazebo-9/gazebo/util/system.hh>
+#include <gazebo-7/gazebo/physics/physics.hh>
+#include <gazebo-7/gazebo/util/system.hh>
 
 #include <ros/ros.h>
 #include "ros/callback_queue.h"
@@ -44,9 +44,9 @@ namespace gazebo
             void OnRosMsg( const pedsim_msgs::AgentStatesConstPtr msg) {
 //              ROS_INFO ("OnRosMsg ... ");
                 std::string model_name;
-                for(unsigned int mdl = 0; mdl < world_->ModelCount(); mdl++) {
+                for(unsigned int mdl = 0; mdl < world_->GetModelCount(); mdl++) {
                     physics::ModelPtr  tmp_model;
-                    tmp_model = world_->ModelByIndex(mdl);
+                    tmp_model = world_->GetModel(mdl);
                     std::string frame_id;
                     frame_id = tmp_model->GetName();
 
