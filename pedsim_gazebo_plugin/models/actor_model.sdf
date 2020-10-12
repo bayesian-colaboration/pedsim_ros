@@ -7,17 +7,29 @@
   <link name="link">
     <collision name="collision">
       <geometry>
+        <cylinder>
+          <radius> 0.25 </radius>
+          <length> 1.5 </length>
+        </cylinder>
+        <!--    
         <box>
           <size>.5 .5 1.5</size>
         </box>
+        -->
       </geometry>
     </collision>
 
     <visual name="visual">
       <geometry>
+        <cylinder>
+          <radius> 0.25 </radius>
+          <length> 1.5 </length>
+        </cylinder>
+        <!--    
         <box>
           <size>.5 .5 1.5</size>
         </box>
+        -->
       </geometry>
     </visual>
 
