@@ -7,7 +7,8 @@
 <arg name="debug" default="false"/>
 
 <!-- simulator stuff -->
-<arg name="scene_file" default="$(find pedsim_simulator)scenarios/social_contexts.xml"/> ​ <!-- people number/movements, obstacles and robot pose setup -->
+<arg name="scene_file" default="$(find pedsim_simulator)scenarios/social_contexts_prueba.xml"/> ​ <!-- people number/movements, obstacles and robot pose setup -->
+
 
 <!-- this needs some additional work and explanations, other day -->
 <arg name="with_robot" default="true"/>
@@ -31,9 +32,11 @@
 <node pkg="pedsim_gazebo_plugin" type="spawn_pedsim_agents.py" name="spawn_pedsim_agents" output="screen">
 </node>
 
+<!-- Initial pose and orientation [x, y and Yaw] (comment if necessary) -->
+
 <!-- turtlebot2 stuff -->
 <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
-<arg name="world_file" value="$(find pedsim_gazebo_plugin)/worlds/social_contexts.world"/> ​ <!-- world provided by the pedsim package -->
+<arg name="world_file" value="$(find pedsim_gazebo_plugin)/worlds/social_contexts_prueba.world"/> ​ <!-- world provided by the pedsim package -->
 </include> ​ <!-- and nothing more -->
 
 <!-- turtlebot_teleop_key already has its own built in velocity smoother -->
