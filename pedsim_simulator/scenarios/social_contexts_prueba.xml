@@ -29,7 +29,14 @@ ROBOT = 2, ELDER = 3 -->
 <!--AgentClusters--> 
 <!-- Ver fichero de Vicente-->
 
-<agent x="4" y="1.5" n="2" dx="2" dy="1" type="0">
+<agent x="4" y="1.5" n="1" dx="2" dy="1" type="0">
+<addwaypoint id="W2"/>
+<addwaypoint id="W3"/>
+<addwaypoint id="W2"/>
+<addwaypoint id="W1"/>
+</agent>
+
+<agent x="4" y="1.5" n="1" dx="2" dy="1" type="3">
 <addwaypoint id="W2"/>
 <addwaypoint id="W3"/>
 <addwaypoint id="W2"/>
